@@ -1,11 +1,26 @@
+
 class Test {
 
-	//static String q = "11";
+
+	private static class InstanceHolder { // is not called
+		static String _a = "1";
+		static String _b = b;
+		static {
+			System.out.println("InstanceHolder static");
+		}
+		private static final Test INSTANCE = new Test();
+	}
+
+
+	public Test() {
+		System.out.println("Test()");
+	}
 
 	static String b = sayHello(); // a static method is called to assign value to b.
 	// but its a has not been initialized yet.
 
 	static String sayHello() {
+		System.out.println("sayHello()");
 		return a;
 	}
 
