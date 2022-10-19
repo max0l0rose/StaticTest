@@ -1,7 +1,6 @@
 
 class Test {
-
-
+	// --------------------------------------------------------------------------
 	private static class InstanceHolder { // is not called
 		static String _a = "1";
 		static String _b = b;
@@ -11,7 +10,11 @@ class Test {
 		private static final Test INSTANCE = new Test();
 	}
 
+	public static Test getInstance() {
+		return InstanceHolder.INSTANCE;
+	}
 
+	// --------------------------------------------------------------------------
 	public Test() {
 		System.out.println("Test()");
 	}
@@ -30,11 +33,11 @@ class Test {
 		c = "ccc";
 	}
 
-	static String c = sayHello(); // assignes "hello" to variable c
+	static String c = "ccc222";
 
 	static String d = c;
 	//static String e = f; // compiler: illegal forward reference
 
-	final static String f = "fff"; // assignes "hello" to variable c
-	final static String g = "ggg"; // assignes "hello" to variable c
+	final static String f = "fff";
+	final static String g = "ggg";
 }

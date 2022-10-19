@@ -7,6 +7,8 @@ public class Main {
 //
     public static void main(String[] args) {
         String cc = Test.c;
+
+        Test.getInstance();
 //
 //        String bb = Test.b;
 //        String aa = Test.a;
